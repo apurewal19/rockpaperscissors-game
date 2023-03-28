@@ -1,0 +1,126 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #1a2b99;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #0d2446;
+    color: #dbe6ef;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.button-rock,
+.button-paper,
+.button-scissors{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+    width: 200px;
+    border: solid;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    border-color: #ada50c;
+    background-color: #d0c71c;
+}
+
+.button-rock:hover,
+.button-paper:hover,
+.button-scissors:hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+    width: 200px;
+    border: solid;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    border-color: white;
+    background-color: #9e9712e6;
+}
+
+.card-title {
+    font-size: x-large;
+    margin: 40px;
+}
+
+img {
+    height: 145px;
+    width: auto;
+}
+
+button {
+    margin: 40px;
+    padding: 14px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 10px;
+}
+
+.outcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.outcome {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: solid white;
+    height: 200px;
+    width: 400px;
+    overflow: auto; 
+}
+
+.score-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border: solid;
+    border-color: #1a2b99;
+    margin: 60px;
+    gap: 50px;
+    border-radius: 10px;
+    background-color: #cad0f5;
+}
+
+.player-score {
+    display: flex;
+    font-size: larger;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    
+}
+
+.computer-score {
+    display: flex;
+    font-size: larger;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    
+}

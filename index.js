@@ -1,5 +1,30 @@
+let scorePlayer = 0;
+let scoreComputer = 0;
 
+const rockButton = document.querySelector(".button-rock");
+const paperButton = document.querySelector(".button-paper");
+const scissorsButton = document.querySelector(".button-scissors");
 const options = ["rock", "paper", "scissors"];
+const outcome = document.querySelector(".outcome");
+const p = document.createElement('p');
+
+rockButton.addEventListener('click', () => {
+    const playerSelection = "rock";
+    const computerSelection = getComputerChoice();
+    playRound(playerSelection,computerSelection);
+})
+
+paperButton.addEventListener('click', () => {
+    const playerSelection = "paper";
+    const computerSelection = getComputerChoice();
+    playRound(playerSelection,computerSelection);
+})
+
+scissorsButton.addEventListener('click', () => {
+    const playerSelection = "scissors";
+    const computerSelection = getComputerChoice();
+    playRound(playerSelection,computerSelection);
+})
 
 function getComputerChoice() {
     const choice = options[Math.floor(Math.random() * options.length)];
@@ -23,11 +48,14 @@ function checkWinner (playerSelection, computerSelection) {
 function playRound (playerSelection, computerSelection) {
     const result = checkWinner(playerSelection, computerSelection);
     if (result == "Tie") {
-        return "It's a tie";
+        p.innerText = "It's a tie";
+        outcome.appendChild(p);
     } else if (result == "Player") {
-        return `You Win! ${playerSelection} beats ${computerSelection}`; 
+        p.innerText = `You Win! ${playerSelection} beats ${computerSelection}`; 
+        outcome.appendChild(p);
     } else {
-        return `You Lose! ${computerSelection} beats ${playerSelection}`;
+        p.innerText = `You Lose! ${computerSelection} beats ${playerSelection}`;
+        outcome.appendChild(p);
     }
 }
 
@@ -46,32 +74,33 @@ function getPlayerChoice() {
     }
 }
 
-function game() {
-    let scorePlayer = 0;
-    let scoreComputer = 0;
+//function game() {
+//    let scorePlayer = 0;
+//    let scoreComputer = 0;
+//
+//    console.log ("Welcome");
+//    for (let i = 0; i < 5; i++) {
+//        const playerSelection = getPlayerChoice();
+//        const computerSelection = getComputerChoice();
+//        console.log ("-------------");
+//        console.log(playRound(playerSelection, computerSelection));
+//        if (checkWinner(playerSelection,computerSelection)) {
+//            scorePlayer ++;
+//        } else if (checkWinner(playerSelection, computerSelection)) {
+//            scoreComputer ++;
+//        }
+//    }
+//    console.log ("Game over");
+//    if (scorePlayer > scoreComputer) {
+//        console.log ("Player wins the game");
+//    } else if (scorePlayer < scoreComputer) {
+//        console.log ("Computer wins the game");
+//    } else {
+//        console.log ("We have a tie");
+//    }
+//}
+//
+// game();
 
-    console.log ("Welcome");
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = getPlayerChoice();
-        const computerSelection = getComputerChoice();
-        console.log ("-------------");
-        console.log(playRound(playerSelection, computerSelection));
-        if (checkWinner(playerSelection,computerSelection)) {
-            scorePlayer ++;
-        } else if (checkWinner(playerSelection, computerSelection)) {
-            scoreComputer ++;
-        }
-    }
-    console.log ("Game over");
-    if (scorePlayer > scoreComputer) {
-        console.log ("Player wins the game");
-    } else if (scorePlayer < scoreComputer) {
-        console.log ("Computer wins the game");
-    } else {
-        console.log ("We have a tie");
-    }
-}
-
-game();
 
 
