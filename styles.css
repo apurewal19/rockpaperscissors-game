@@ -16,6 +16,13 @@ h1 {
     color: #dbe6ef;
 }
 
+h3 {
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .buttons-container {
     display: flex;
     justify-content: center;
@@ -80,6 +87,7 @@ button {
 .outcome-container {
     display: flex;
     justify-content: center;
+    padding-top: 30px;
     align-items: center;
     flex-direction: row;
 }
@@ -89,10 +97,18 @@ button {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    border: solid white;
-    height: 200px;
+    height: 100px;
     width: 400px;
     overflow: auto; 
+    color: white;
+}
+
+.player-won {
+    color: #d0c71c;
+}
+
+.computer-won {
+    color: red;
 }
 
 .score-container {
@@ -100,11 +116,12 @@ button {
     justify-content: center;
     flex-direction: row;
     border: solid;
-    border-color: #1a2b99;
-    margin: 60px;
+    border-color: #4658cf;
+    margin-left: 500px;
+    margin-right: 500px;
     gap: 50px;
     border-radius: 10px;
-    background-color: #cad0f5;
+    background-color: #0d2446;
 }
 
 .player-score {
@@ -113,7 +130,7 @@ button {
     padding: 20px;
     padding-left: 100px;
     padding-right: 100px;
-    
+    color: #d0c71c;
 }
 
 .computer-score {
@@ -122,5 +139,19 @@ button {
     padding: 20px;
     padding-left: 100px;
     padding-right: 100px;
-    
+    color: #d0c71c;
+}
+
+#restart-button {
+    background-color: rgb(208, 10, 10);
+    color: white;
+    border: solid white;
+    border-width: 1px;
+}
+
+#restart-button:hover {
+    background-color: rgb(208, 10, 10);
+    color: white;
+    border: solid #3cde13;
+    border-width: 3px;
 }
